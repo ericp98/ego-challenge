@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+.navbar{
+  border-bottom: 1px solid #D1D1D1;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-text {
+  width: 121px;
+  height: 18px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: black;
+  position: relative;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-text:hover{
+  text-decoration: none;
+  color: #eb0a1e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-text:hover::after{
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  bottom: -1.2em;
+  left: 0;
+  right: 0;
+  background-color: #d0021b;
+  /*transition: opacity .4s ease-in-out;*/
+}
+
+.navbar-text.active{
+  color: #eb0a1e;
+}
+
+.navbar-text.active::after{
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  bottom: -1.2em;
+  left: 0;
+  right: 0;
+  background-color: #d0021b;
+}
+
+.menu-item{
+  cursor: pointer;
+}
+
+.sidebar-items {
+
+  font-family: Montserrat;
+  font-size: 1.3em;
+  line-height: 2em;
+
+  background-color: #fff;
+  width: 390px;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: fixed;
+  top: 0%;
+  right: -100%; 
+  transition: 1000ms;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar-items.active {
+  right: 0%;
+  transition: 1000ms;
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer-sidebar{
+  background-color: #e7e7e7;
+  height: 400px;
+}
+
+.sidebar-link{
+  color: black;
+}
+
+.sidebar-link:hover{
+  text-decoration: none;
+  color: black;
+}
+
+.header-title{
+  font-family: Montserrat;
+  font-weight: 600;
+}
+
+.filter-items{
+  font-family: Montserrat;
+  font-size: 0.9em;
+}
+
+.filter-bold{
+  font-weight: bold;
+}
+
+.bdg1:hover{
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.itemspanc{
+  font-family: Montserrat;
+  font-size: 0.8em;
+}
+
+/* Responsive sidebar */
+@media (max-width: 576px){
+  body{
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar-items{
+    position: fixed; 
+    width: 100%;
+  } 
+
+  .sidebar-margin{
+    margin-top: 70px;
   }
 }
