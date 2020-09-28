@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Icons
 import { FaBars } from 'react-icons/fa';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 
 
 function Navbar(props) {
@@ -22,8 +22,8 @@ function Navbar(props) {
                         <img src={logo} alt=""/>
                     </Link>
 
-                    <div className="d-none d-sm-none d-sm-block container">
-                        <ul className="navbar-nav ml-5"> {/* ml-5 */}
+                    <div className="d-none d-lg-none d-lg-block container">
+                        <ul className="navbar-nav ml-5"> 
                             <li className="nav-item">
                                 <Link to="/models" className={"navbar-text " + active('models')}>
                                     <span className="text-span ml-4">Modelos</span>
@@ -40,7 +40,7 @@ function Navbar(props) {
 
                     <ul className={"navbar-nav ml-auto"}>
                         <li className="nav-item menu-item d-flex" onClick={props.handleSidebar}>
-                            <span className="d-none d-sm-none d-sm-block">Menú </span>
+                            <span className="d-none d-lg-none d-lg-block">Menú </span>
                             <FaBars className="ml-2 mt-1" /> 
                         </li>
                     </ul>

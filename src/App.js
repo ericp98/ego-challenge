@@ -3,10 +3,11 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Components
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
-import Titulo from './components/Titulo';
-import Filtros from './components/Filtros'
+import Navbar from './components/navbar/Navbar';
+import Sidebar from './components/sidebar/Sidebar';
+import Titulo from './components/headerPage/Titulo';
+import Filtros from './components/headerPage/Filtros';
+import Cars from './components/bodyPage/Cars'
 
 // Bootstrap
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -25,11 +26,13 @@ function App() {
           <Navbar route="models" handleSidebar={() => showSidebar()}/>
           <Titulo />
           <Filtros />
+          <Cars />
           <Sidebar active={sidebar} closeSidebar={() => showSidebar()} /> 
         </Route>
 
         <Route exact path="/data-model">
-          <Navbar route="data-model"/>
+          <Navbar route="data-model" handleSidebar={() => showSidebar()}/>
+          <Sidebar active={sidebar} closeSidebar={() => showSidebar()} /> 
         </Route>
 
     </Router>

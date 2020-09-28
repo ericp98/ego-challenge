@@ -104,18 +104,90 @@
   font-weight: bold;
 }
 
-.bdg1:hover{
+.item-pill:hover{
   background-color: #f7f7f7;
   border-radius: 8px;
 }
 
-.itemspanc{
+.dropdown-menu{
+  border-radius: 5px !important;
+  box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item{
+  margin-top: -8px !important;
+  margin-bottom: -8px !important;
   font-family: Montserrat;
   font-size: 0.8em;
 }
 
+.dropdown-item:active{
+  background-color: gray !important;
+}
+
+.btn:focus{
+  outline: none !important;
+  box-shadow: none !important; 
+}
+
+/* Sacar flecha por defecto */
+.dropdown-toggle::after { 
+  display:none !important; 
+}
+
+/* Cards */
+
+.card{
+  border: none !important;
+}
+
+.card:hover .card-title {
+  color: #eb0a1e;
+}
+
+.card:hover .footer-card{
+  visibility: visible;
+}
+
+.footer-card {
+  background-color: black;
+  border-radius: 50px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  visibility: hidden;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.footer-card:hover{
+  background-color: #eb0a1e;
+  transition: 1000ms;
+}
+
+.card-header{
+  background-color: white !important;
+  border-bottom: none !important;
+}
+
+.card-footer{
+  border-top: none !important;
+  background-color: white !important;
+}
+
+.card-title{
+  font-family: Montserrat;
+  font-weight: 600;
+}
+
+.card-subtitle{
+  font-family: Montserrat;
+}
+
 /* Responsive sidebar */
-@media (max-width: 576px){
+@media (max-width: 992px){
   body{
     overflow-x: hidden;
   }
@@ -129,3 +201,19 @@
     margin-top: 70px;
   }
 }
+
+/* 'Filtrar por' resposive */
+/* @media (min-width: 992px){
+  #filterBy.menu-item:hover{
+    cursor: default; 
+  }
+
+  #filterButton{
+    cursor: default;
+  }
+
+  #arrowFilter{
+    display: none;
+  }
+
+} */
