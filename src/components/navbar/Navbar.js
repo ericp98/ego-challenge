@@ -31,9 +31,9 @@ function Navbar(props) {
                             </li>
 
                             <li className="nav-item">
-                                <Link to="data-model" className={"navbar-text " + active('data-model')}>
-                                    <span className="text-span">Ficha de modelo</span>
-                                </Link>
+                                {/* <Link to="data-model" className={"navbar-text " + active('data-model')}>  */}
+                                    <span className="text-span navbar-text">Ficha de modelo</span>
+                                {/* </Link>  */}
                             </li>
                         </ul>
                     </div>

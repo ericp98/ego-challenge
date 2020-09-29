@@ -18,6 +18,21 @@
   height: 100%;
 }
 
+.navbar-text2 {
+  width: 121px;
+  height: 18px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: black;
+  position: relative;
+  height: 100%;
+}
+
 .navbar-text:hover{
   text-decoration: none;
   color: #eb0a1e;
@@ -104,10 +119,21 @@
   font-weight: bold;
 }
 
+.filterSelected{
+  background-color: #f7f7f7;
+}
+
+.item-pill{
+  padding-top: 7px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-bottom: 10px ;
+  border-radius: 30px;
+}
+
 .item-pill:hover{
   background-color: #f7f7f7;
-  border-radius: 8px;
-}
+} 
 
 .dropdown-menu{
   border-radius: 5px !important;
@@ -121,8 +147,8 @@
   font-size: 0.8em;
 }
 
-.dropdown-item:active{
-  background-color: gray !important;
+.dropdown-item-selected{
+  background-color: #f7f7f7 !important;
 }
 
 .btn:focus{
@@ -184,6 +210,31 @@
 
 .card-subtitle{
   font-family: Montserrat;
+}
+
+
+/* Footer custom */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 100px;
+} 
+
+#footer{
+  background-color: black;
+  position: relative;
+  height: 50px;
+  margin-top: -50px;
+  clear: both;
 }
 
 /* Responsive sidebar */

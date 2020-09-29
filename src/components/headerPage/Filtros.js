@@ -3,7 +3,7 @@ import FilterDropdown from './FilterDropdown';
 import FilterItems from './FilterItems'
 import { filterData, sortData } from './DropdownData';
 
-function Filtros() {
+function Filtros(props) {
 
     const [width, setWidth] = useState(window.innerWidth);
 
@@ -28,12 +28,27 @@ function Filtros() {
             {isLargeWindow() ? (
               <span className="filter-bold mb-2 p-2">Filtrar por</span>
             ) : (
-              <FilterDropdown title="Filtrar por" items={filterData} />
+              <FilterDropdown 
+                title="Filtrar por" 
+                items={filterData} 
+                isFilter={true}
+                activeFilters={(filter) => props.activeFilter(filter)}
+                actualFilter={props.actualFilter}
+              />
             )}
 
-            <FilterItems />
+            <FilterItems 
+              activeFilters={(filter) => props.activeFilter(filter)}
+              actualFilter={props.actualFilter}
+            />
 
-            <FilterDropdown title="Ordenar por" items={sortData} />
+            <FilterDropdown 
+              title="Ordenar por" 
+              items={sortData} 
+              isFilter={false}
+              activeSort={(sort) => props.activeSort(sort)}
+              actualSort={props.actualSort}
+            />
           </div>
         </div>
       </div>

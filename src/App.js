@@ -7,7 +7,8 @@ import Navbar from './components/navbar/Navbar';
 import Sidebar from './components/sidebar/Sidebar';
 import Titulo from './components/headerPage/Titulo';
 import Filtros from './components/headerPage/Filtros';
-import Cars from './components/bodyPage/Cars'
+import Cars from './components/bodyPage/Cars';
+import Footer from './components/footerPage/Footer';
 
 // Bootstrap
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -19,15 +20,34 @@ function App() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar); 
 
+  const [filterActive, setFilterActive] = useState('Todos');
+  const applyFitler = (filter) => setFilterActive(filter);
+
+  const [sortActive, setSortActive] = useState('Nada');
+  const applySort = (sort) => setSortActive(sort);
+
   return (
     <Router>
 
         <Route exact path="/models">
           <Navbar route="models" handleSidebar={() => showSidebar()}/>
+
           <Titulo />
-          <Filtros />
-          <Cars />
+
+          <Filtros 
+            activeFilter={(filter) => applyFitler(filter)} 
+            actualFilter={filterActive}
+            activeSort={(sort) => applySort(sort)}
+            actualSort={sortActive}
+          />
+
+          <Cars 
+            filterBy={filterActive} 
+            sortBy={sortActive}
+          />
+
           <Sidebar active={sidebar} closeSidebar={() => showSidebar()} /> 
+
         </Route>
 
         <Route exact path="/data-model">
