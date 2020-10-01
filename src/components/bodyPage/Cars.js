@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // Filter ctrl
 import { filterCars, sortCars } from './FiltersControllers';
@@ -24,10 +25,16 @@ function Cars(props) {
     }
 
     useEffect(() => {
-      setLoading(true);
-      getCars();
-      setLoading(false);
-    }, [cars]);
+      let isMounted = true;
+
+      if (isMounted){
+        setLoading(true);
+        getCars();
+        setLoading(false);
+      }
+
+      return () => {isMounted = false}
+    }, []);
 
     return (
       <div className="container">
@@ -48,7 +55,15 @@ function Cars(props) {
                           <img className="card-img-top" src={linkAPI + car.photo} alt="" />
                         </div>
                         <div className="card-footer text-center">
-                          <span className="footer-card menu-item">Ver modelo</span>
+                          <Link to='data-model' className='linkDataModel'>
+                            <span 
+                              className="footer-card menu-item"
+                              id={car.id}
+                              onClick={(e) => props.setModel(e.target.getAttribute('id'))}
+                            >
+                              Ver modelo
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     );

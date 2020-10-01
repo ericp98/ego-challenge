@@ -8,7 +8,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import Titulo from './components/headerPage/Titulo';
 import Filtros from './components/headerPage/Filtros';
 import Cars from './components/bodyPage/Cars';
-import Footer from './components/footerPage/Footer';
+import ModelCar from './components/model-car/ModelCar';
 
 // Bootstrap
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -25,6 +25,9 @@ function App() {
 
   const [sortActive, setSortActive] = useState('Nada');
   const applySort = (sort) => setSortActive(sort);
+
+  const [idModel, setIdModel] = useState(1);
+  const setModel = (model) => setIdModel(model);
 
   return (
     <Router>
@@ -44,15 +47,30 @@ function App() {
           <Cars 
             filterBy={filterActive} 
             sortBy={sortActive}
+            setModel={(model) => setModel(model)}
           />
 
-          <Sidebar active={sidebar} closeSidebar={() => showSidebar()} /> 
+          <Sidebar 
+            active={sidebar} 
+            closeSidebar={() => showSidebar()} 
+          /> 
 
         </Route>
 
         <Route exact path="/data-model">
-          <Navbar route="data-model" handleSidebar={() => showSidebar()}/>
-          <Sidebar active={sidebar} closeSidebar={() => showSidebar()} /> 
+          <Navbar 
+            route="data-model" 
+            handleSidebar={() => showSidebar()}
+          />
+
+          <ModelCar 
+            idModel={idModel}
+          />
+
+          <Sidebar 
+            active={sidebar} 
+            closeSidebar={() => showSidebar()} 
+          /> 
         </Route>
 
     </Router>

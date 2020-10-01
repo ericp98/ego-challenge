@@ -26,14 +26,16 @@ function Navbar(props) {
                         <ul className="navbar-nav ml-5"> 
                             <li className="nav-item">
                                 <Link to="/models" className={"navbar-text " + active('models')}>
-                                    <span className="text-span ml-4">Modelos</span>
+                                    <span className="ml-4">Modelos</span>
                                 </Link>
                             </li>
 
                             <li className="nav-item">
-                                {/* <Link to="data-model" className={"navbar-text " + active('data-model')}>  */}
-                                    <span className="text-span navbar-text">Ficha de modelo</span>
-                                {/* </Link>  */}
+                                {/* <Link to="#" className={"navbar-text " + active('data-model')}>   */}
+                                <div className={"ficha-modelo " }>
+                                    <span className={"navbar-text " + active('data-model')}>Ficha de modelo</span>
+                                </div>
+                               {/*  </Link>   */}
                             </li>
                         </ul>
                     </div>
