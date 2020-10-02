@@ -78,9 +78,7 @@ export default function CarouselResponsive(props) {
                       {data.map((feature, item) => {
                         return (
                           <div
-                            className={
-                              "col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
-                            }
+                            className="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center"
                             key={item}
                           >
                             <div className="card" style={{ width: "18rem" }}>
@@ -89,7 +87,7 @@ export default function CarouselResponsive(props) {
                                 alt=""
                                 className="card-image"
                               />
-                              <div className="card-body">
+                              <div className="card-body bg-gray">
                                 <h5 className="title-carousel">
                                   {feature.name}
                                 </h5>

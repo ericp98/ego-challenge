@@ -39,7 +39,7 @@ function FilterDropdown(props) {
           <span
             className="filter-bold menu-item p-2 filter-items"
           >
-            {props.title} <MdKeyboardArrowDown id="arrowFilter" />
+            {props.title} <MdKeyboardArrowDown id="arrowFilter"/>
           </span>
         </button>
         <div
@@ -76,3 +76,4 @@ function FilterDropdown(props) {
 }
 
 export default FilterDropdown;
+

@@ -9,7 +9,7 @@ export default function ModelHeader(props) {
         <div className="container-fluid mt-5 ficha-header pt-5">
             <div className="row">
                 <div className="col-lg-6 d-flex justify-content-center">
-                    <img src={linkAPI + model.photo} alt="" className="img-fluid"/>  
+                    <img src={linkAPI + model.photo} alt="" className="img-fluid" style={{maxWidth:'580px'}}/>  
                 </div>
 
                 <div className="col-lg-6">

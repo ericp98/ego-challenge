@@ -15,7 +15,7 @@ function Navbar(props) {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" style={{marginBottom:'100px'}}>
             <div className="row">
                 <nav className="navbar navbar-expand bg-white col-12 fixed-top">
                     <Link to="/models" className="navbar-brand ml-3">
@@ -31,11 +31,9 @@ function Navbar(props) {
                             </li>
 
                             <li className="nav-item">
-                                {/* <Link to="#" className={"navbar-text " + active('data-model')}>   */}
                                 <div className={"ficha-modelo " }>
                                     <span className={"navbar-text " + active('data-model')}>Ficha de modelo</span>
                                 </div>
-                               {/*  </Link>   */}
                             </li>
                         </ul>
                     </div>

@@ -33,3 +33,4 @@ export const sortData = [
         htmlText: <div>Más {txtNegrita('viejos')} primero</div>
     }
 ]
+

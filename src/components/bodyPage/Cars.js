@@ -53,7 +53,7 @@ function Cars(props) {
                           </h6>
                         </div>
                         <div className="card-body">
-                          <img className="card-img-top" src={linkAPI + car.photo} alt="" />
+                          <img className="card-img-top" src={linkAPI + car.thumbnail} alt="" />
                         </div>
                         <div className="card-footer text-center">
                           <Link to='data-model' className='linkDataModel'>

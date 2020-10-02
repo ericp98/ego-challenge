@@ -8,7 +8,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import Titulo from './components/headerPage/Titulo';
 import Filtros from './components/headerPage/Filtros';
 import Cars from './components/bodyPage/Cars';
-import ModelCar from './components/model-car/ModelCar';
+import ModelCar from './components/ficha-modelo/ModelCar';
 import ErrorPage from './components/errorPage/ErrorPage';
 
 // Bootstrap

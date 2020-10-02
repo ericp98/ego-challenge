@@ -13,28 +13,39 @@ function Sidebar(props) {
     const footer = document.getElementById("footer");
     const arrowCarousel = document.getElementsByClassName('carousel-control-next-icon');
     const arrowCarouselLeft = document.getElementsByClassName('carousel-control-prev-icon');
-    const carouselIndicators = document.getElementsByClassName('carousel-indicators')
+    const carouselIndicators = document.getElementsByClassName('carousel-indicators');
+    const carouselCtrlNext = document.getElementsByClassName('carousel-control-next');
+    const carouselCtrlPrev = document.getElementsByClassName('carousel-control-prev');
 
     if (props.active){
       footer.style.display = "none";
       body.style.overflow = "hidden";
-      handleArrowCarousel(arrowCarousel, 'hidden')
-      handleArrowCarousel(arrowCarouselLeft, 'hidden')
-      handleArrowCarousel(carouselIndicators, 'hidden')
-      return ("sidebar-items active sidebar-margin siedbar-pt")
+      handleArrowCarousel(arrowCarousel, 'hidden');
+      handleArrowCarousel(arrowCarouselLeft, 'hidden');
+      handleArrowCarousel(carouselIndicators, 'hidden');
+      handleCtrlCarousel(carouselCtrlNext, carouselCtrlPrev, 'none'); 
+      return ("sidebar-items active sidebar-margin siedbar-pt");
     } else {
       footer.style.display = "block";
       body.style.overflow = "auto";
       handleArrowCarousel(arrowCarousel, 'visible');
       handleArrowCarousel(arrowCarouselLeft, 'visible');
-      handleArrowCarousel(carouselIndicators, 'visible')
-      return ("sidebar-items sidebar-margin")
+      handleArrowCarousel(carouselIndicators, 'visible');
+      handleCtrlCarousel(carouselCtrlNext, carouselCtrlPrev, 'inline-block');
+      return ("sidebar-items sidebar-margin");
     }
   }
 
   const handleArrowCarousel = (arrow, value) => {
     if (arrow.length > 0){
       arrow[0].style.visibility = value
+    }
+  }
+
+  const handleCtrlCarousel = (ctrlNext, ctrlPrev, display) => {
+    if (ctrlNext.length > 0){
+      ctrlNext[0].style.display = display;
+      ctrlPrev[0].style.display = display;
     }
   }
 

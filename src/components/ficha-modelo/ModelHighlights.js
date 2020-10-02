@@ -11,9 +11,9 @@ export default function ModelHighlights(props) {
     const textHighlight = (highlight) => {
         return (
           <Fragment>
-            <div className="p-lg-5 pb-5">
-                <h1 className="title-model pt-3 pb-5">{highlight.title}</h1>
-                <p className="subtitle-model text-justify pt-3">{highlight.content}</p>
+            <div className="p-lg-5 pb-5"> {/* p-lg-5 pb-5 */}
+                <h1 className="title-model pt-3 pb-2" style={{height:'auto'}}>{highlight.title}</h1>
+                <p className="subtitle-model text-justify pt-3" style={{height:'auto'}}>{highlight.content}</p>
             </div>
           </Fragment>
         );
@@ -22,7 +22,9 @@ export default function ModelHighlights(props) {
     const imageHighlight = (highlight) => {
         return (
           <Fragment>
-            <img src={linkAPI + highlight.image} alt="" className="img-fluid card-image" />
+            <div className="row align-items-center">
+                <img src={linkAPI + highlight.image} alt="" className="card-image" style={{maxHeight:'320px'}} /> {/* img-fluid */}
+            </div>
           </Fragment>
         );
     }
@@ -49,10 +51,10 @@ export default function ModelHighlights(props) {
                                 :
 
                                     <Fragment> 
-                                        <div className="col-lg-6 d-flex pt-5 justify-content-md-center">
+                                        <div className="col-lg-6 d-flex pt-5 justify-content-center">
                                             {imageHighlight(highlight)}
                                         </div>
-                                        <div className="col-lg-6 d-flex pt-5 justify-content-md-center">
+                                        <div className="col-lg-6 d-flex pt-5 justify-content-center">
                                             {textHighlight(highlight)}
                                         </div>
                                     </Fragment>
