@@ -4,11 +4,11 @@ import Axios from 'axios';
 // Components
 import ModelHeader from './ModelHeader';
 import ModelCarousel from './ModelCarousel';
-import ModelHighlits from './ModelHighlits';
+import ModelHighlights from './ModelHighlights';
 
 function ModelCar(props) {
 
-    const [model, setModel] = useState('');
+    const [model, setModel] = useState([]);
 
     const linkAPI = 'https://challenge.agenciaego.tech';
 
@@ -41,9 +41,9 @@ function ModelCar(props) {
                 linkAPI={linkAPI}
                 features={model.model_features || []}
             /> 
-            <ModelHighlits 
+            <ModelHighlights 
                 linkAPI={linkAPI}
-                highlits={model.model_highlights || []}
+                highlights={model.model_highlights || []}
             /> 
         </ Fragment>
     )

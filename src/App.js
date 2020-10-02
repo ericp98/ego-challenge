@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 // Components
 import Navbar from './components/navbar/Navbar';
@@ -9,6 +9,7 @@ import Titulo from './components/headerPage/Titulo';
 import Filtros from './components/headerPage/Filtros';
 import Cars from './components/bodyPage/Cars';
 import ModelCar from './components/model-car/ModelCar';
+import ErrorPage from './components/errorPage/ErrorPage';
 
 // Bootstrap
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -31,9 +32,17 @@ function App() {
 
   return (
     <Router>
+      <Switch>
+        <Route exact path='/'>
+            <Redirect to='/models'/>
+        </Route> 
 
         <Route exact path="/models">
-          <Navbar route="models" handleSidebar={() => showSidebar()}/>
+          <Navbar 
+            route="models" 
+            handleSidebar={() => showSidebar()}
+            sidebarEnabled = {sidebar}
+          />
 
           <Titulo />
 
@@ -54,13 +63,13 @@ function App() {
             active={sidebar} 
             closeSidebar={() => showSidebar()} 
           /> 
-
         </Route>
 
         <Route exact path="/data-model">
           <Navbar 
             route="data-model" 
             handleSidebar={() => showSidebar()}
+            sidebarEnabled = {sidebar}
           />
 
           <ModelCar 
@@ -73,6 +82,21 @@ function App() {
           /> 
         </Route>
 
+        <Route>
+          <Navbar 
+            route="#" 
+            handleSidebar={() => showSidebar()}
+            sidebarEnabled = {sidebar}
+          />
+          <ErrorPage />
+
+          <Sidebar 
+            active={sidebar} 
+            closeSidebar={() => showSidebar()} 
+          /> 
+        </Route>
+
+      </Switch>
     </Router>
   );
 }

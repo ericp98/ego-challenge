@@ -1,14 +1,17 @@
 export const filterCars = (cars, filter) => {
-    if (filter !== 'Todos'){
+    if (filter !== 'Todos'){ 
         const carsFilter = cars.filter(car => car.segment === filter);
         return carsFilter;      
     } else {
-        return cars;
-    }
+      /* Return all cars */
+      const carsFilter = cars.filter(car => car.segment !== null);
+      return carsFilter;
+    } 
 }; 
 
 export const sortCars = (cars, typeSort) => {
     switch (typeSort) {
+        
       case "De menor a mayor precio":
         return sortMenorAMayor(cars);
 

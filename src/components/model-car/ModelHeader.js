@@ -6,10 +6,10 @@ export default function ModelHeader(props) {
     const linkAPI = props.linkAPI;
 
     return (
-        <div className="container-fluid mt-5 ficha-header">
+        <div className="container-fluid mt-5 ficha-header pt-5">
             <div className="row">
                 <div className="col-lg-6 d-flex justify-content-center">
-                    <img src={linkAPI + model.photo} alt=""/>  
+                    <img src={linkAPI + model.photo} alt="" className="img-fluid"/>  
                 </div>
 
                 <div className="col-lg-6">

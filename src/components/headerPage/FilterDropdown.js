@@ -6,6 +6,8 @@ function FilterDropdown(props) {
     /* Is item filter or item Sort */
     const isFilter = props.isFilter;
 
+    const items = props.items;
+
     const actualFilter = props.actualFilter;
     const actualSort = props.actualSort;
 
@@ -14,6 +16,7 @@ function FilterDropdown(props) {
         return length > index;
     }
 
+    /* Chech if is item selected */
     const isItemSelected = (name) => {
       if (isFilter) {
         if (name === actualFilter){
@@ -43,7 +46,7 @@ function FilterDropdown(props) {
           className="dropdown-menu menu-item"
           aria-labelledby="dropdownMenuButton"
         >
-          {props.items.map((item, index) => {
+          {items.map((item, index) => {
               return (
                   <div key={index}>
                       <div 
@@ -51,11 +54,15 @@ function FilterDropdown(props) {
                         name={item.name}
                         onClick={
                           isFilter ? 
+
+                          /* Activar filtro */
                           (e) => props.activeFilters(e.target.getAttribute('name')) : 
+
+                          /* Activar orden */
                           (e) => props.activeSort(e.target.getAttribute('name'))
                         }
                         > 
-                          {isFilter ? item.name : item.name }
+                          {isFilter ? item.name : item.htmlText }
                       </div>
 
                       {/* If is last element, not print divider */}

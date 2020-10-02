@@ -12,7 +12,6 @@ function ModelCarousel (props) {
     useEffect(() => {
       const handleWindowResize = () => setWidth(window.innerWidth);
       window.addEventListener("resize", handleWindowResize);
-      console.log(width)
 
       /* Remove event useEffect*/
       return () => window.removeEventListener("resize", handleWindowResize);

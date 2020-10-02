@@ -89,8 +89,8 @@ export default function CarouselResponsive(props) {
                                 alt=""
                                 className="card-image"
                               />
-                              <div className="card-body plasd">
-                                <h5 className="card-title tests">
+                              <div className="card-body">
+                                <h5 className="title-carousel">
                                   {feature.name}
                                 </h5>
                                 <p className="card-text card-subtitle text-justify">
@@ -107,7 +107,7 @@ export default function CarouselResponsive(props) {
               })}
             </div>
             <a
-              className="carousel-control-prev border"
+              className="carousel-control-prev"
               href="#carouselExampleControls"
               role="button"
               data-slide="prev"

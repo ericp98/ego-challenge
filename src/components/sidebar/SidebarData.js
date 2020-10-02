@@ -6,34 +6,34 @@ export const SidebarData = [
     },
     {
         title: "Servicios y Accesorios",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Financiacion",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Reviews y Comunidad",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     }]
 
 export const SidebarData2 = [
     {
         title: "Toyota Mobility Service",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Toyota Gazoo Racing",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Toyota Híbridos",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
 ]
@@ -41,17 +41,17 @@ export const SidebarData2 = [
 export const SidebarData3 = [
     {
         title: "Concesionarios",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Test Drive",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Contacto",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
 ]
@@ -59,32 +59,32 @@ export const SidebarData3 = [
 export const SidebarData4 = [
     {
         title: "Actividades",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Servicios al Cliente",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Ventas Especiales",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Innovación",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Prensa",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     },
     {
         title: "Acerca de...",
-        path: "/models",
+        path: "#",
         className: "nav-text"
     }
 ]

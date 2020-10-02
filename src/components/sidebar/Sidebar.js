@@ -5,8 +5,41 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 function Sidebar(props) {
 
+  const handleOverflow = () => {
+
+    /* Al activar el sidebar, se ocultan el footer, el scroll del body y la flecha del carousel */
+
+    const body = document.body;
+    const footer = document.getElementById("footer");
+    const arrowCarousel = document.getElementsByClassName('carousel-control-next-icon');
+    const arrowCarouselLeft = document.getElementsByClassName('carousel-control-prev-icon');
+    const carouselIndicators = document.getElementsByClassName('carousel-indicators')
+
+    if (props.active){
+      footer.style.display = "none";
+      body.style.overflow = "hidden";
+      handleArrowCarousel(arrowCarousel, 'hidden')
+      handleArrowCarousel(arrowCarouselLeft, 'hidden')
+      handleArrowCarousel(carouselIndicators, 'hidden')
+      return ("sidebar-items active sidebar-margin siedbar-pt")
+    } else {
+      footer.style.display = "block";
+      body.style.overflow = "auto";
+      handleArrowCarousel(arrowCarousel, 'visible');
+      handleArrowCarousel(arrowCarouselLeft, 'visible');
+      handleArrowCarousel(carouselIndicators, 'visible')
+      return ("sidebar-items sidebar-margin")
+    }
+  }
+
+  const handleArrowCarousel = (arrow, value) => {
+    if (arrow.length > 0){
+      arrow[0].style.visibility = value
+    }
+  }
+
     return (
-      <div className={props.active ? "sidebar-items active sidebar-margin" : "sidebar-items sidebar-margin"}>
+      <div className={handleOverflow()}>
         <div className="col-12">
           <div className="row">
             <div
@@ -22,7 +55,7 @@ function Sidebar(props) {
               {SidebarData.map((item, index) => {
                 return (
                   <ul key={index}>
-                    <Link to="#" className="sidebar-link">
+                    <Link to={item.path} className="sidebar-link" onClick={props.closeSidebar}>
                       {item.title}
                     </Link>
                   </ul>

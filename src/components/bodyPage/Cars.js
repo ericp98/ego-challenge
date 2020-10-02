@@ -10,7 +10,6 @@ function Cars(props) {
     const linkAPI = 'https://challenge.agenciaego.tech';
 
     const [cars, setCars] = useState([]);
-    const [loading, setLoading] = useState([false]);
 
     const carsFiltered = filterCars(cars, props.filterBy);
     const carsSort = sortCars(carsFiltered, props.sortBy);
@@ -28,18 +27,20 @@ function Cars(props) {
       let isMounted = true;
 
       if (isMounted){
-        setLoading(true);
         getCars();
-        setLoading(false);
       }
 
       return () => {isMounted = false}
     }, []);
 
+    const formatPrice = (number) => {
+      const monto = new Intl.NumberFormat('de-DE').format(number);
+      return monto;
+    }
+
     return (
       <div className="container">
         {
-            loading ? 'cargando...' : 
             <div className="row justify-content-center">
             {
                 carsSort.map((car, index) => {
@@ -48,7 +49,7 @@ function Cars(props) {
                         <div className="card-header text-center">
                           <h5 className="card-title">{car.name}</h5>
                           <h6 className="card-subtitle mb-2">
-                            {car.year} | $ {car.price}
+                            {car.year} | $ {formatPrice(car.price)}
                           </h6>
                         </div>
                         <div className="card-body">

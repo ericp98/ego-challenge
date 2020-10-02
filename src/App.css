@@ -49,6 +49,15 @@
   background-color: #d0021b;
 }
 
+.navbar-white{
+  background-color: white !important;
+}
+
+.title-padding{
+  padding-top: 5em;
+  padding-bottom: 2em;
+}
+
 .ficha-modelo .navbar-text:hover{
   color: black !important;
 }
@@ -110,6 +119,10 @@
 .sidebar-link:hover{
   text-decoration: none;
   color: black;
+}
+
+.siedbar-pt{
+  padding-top: 3em;
 }
 
 .header-title{
@@ -179,6 +192,12 @@
   color: #eb0a1e;
 }
 
+/* Page error */
+.linkToHome .footer-card {
+  visibility: visible;
+}
+/* ---------------- */
+
 .card:hover .footer-card{
   visibility: visible;
 }
@@ -229,17 +248,6 @@
   background-color: #f7f7f7;
 }
 
-.plasd{
-  background-color: #f7f7f7 !important;
-}
-
-.tests{
-  white-space: nowrap;
-  /* font-size: 1em; */
-  overflow-x: hidden;
-  transition: all ease 100ms;
-} 
-
 .card-image{
   border-radius: 5px;
 }
@@ -252,23 +260,19 @@
 .carousel-control-prev-icon{
   background-image: url('./images/arrowLeft.png') !important;
   margin-top: 60% !important;
-}
+} 
 
 .carousel-control-prev{
   margin-left: -50px !important;
-  background-color: gray;
-  display: inline-block !important;
   height: 150px !important;
   width: 95px !important;
-}
+} 
 
 .carousel-control-next{
   margin-right: -50px !important;
-  background-color: gray;
-  display: inline-block !important;
   height: 150px !important;
   width: 95px !important;
-}
+} 
 
 .carousel-indicators{
   /* padding-bottom: 200px !important; */
@@ -277,6 +281,42 @@
 
 .carousel-indicators li{
   background-color: #c5c5c5 !important;
+}
+
+.title-carousel{
+  font-family: Montserrat;
+  font-weight: 600;
+}
+
+/* Model */
+.title-model{
+  width: 345px;
+  height: 27px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+  color: #373737;
+}
+
+.subtitle-model{
+  width: 345px;
+  height: 108px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.69;
+  letter-spacing: -0.1px;
+  color: #373737;
+}
+
+.pdg5{
+  padding-top: 150px !important;
 }
 
 /* Footer custom */
@@ -316,12 +356,17 @@ html, body{
 @media (max-width: 992px){
   body{
     overflow-x: hidden;
+    /* overflow-y: hidden; */
   }
 
   .sidebar-items{
     position: fixed; 
     width: 100%;
   } 
+
+  .siedbar-pt{
+    padding-top: 0px !important;
+  }
 
   .sidebar-margin{
     margin-top: 70px;

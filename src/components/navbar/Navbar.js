@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Icons
 import { FaBars } from 'react-icons/fa';
-import logo from '../logo.svg';
+import logo from '../../images/logo.svg';
 
 
 function Navbar(props) {
@@ -17,7 +17,7 @@ function Navbar(props) {
     return (
         <div className="container-fluid">
             <div className="row">
-                <nav className="navbar navbar-expand col-12">
+                <nav className="navbar navbar-expand bg-white col-12 fixed-top">
                     <Link to="/models" className="navbar-brand ml-3">
                         <img src={logo} alt=""/>
                     </Link>
