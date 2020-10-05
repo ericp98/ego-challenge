@@ -14,15 +14,21 @@ function Cars(props) {
     const carsFiltered = filterCars(cars, props.filterBy);
     const carsSort = sortCars(carsFiltered, props.sortBy);
 
+    const https = require('http');
+
+    const agent = new https.Agent({
+      rejectUnauthorized: false,
+    });
+
     const getCars = async () => {
         try {
-            const res = await Axios.get(linkAPI + '/models');
+            const res = await Axios.get(linkAPI + '/models', { httpsAgent: agent });
             setCars(res.data);
         } catch (error) {
             console.log(error)
-        }
-    }
-
+        } 
+    } 
+  
     useEffect(() => {
       let isMounted = true;
 
