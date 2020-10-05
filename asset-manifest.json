@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.2dd05b8a.chunk.css",
-    "main.js": "/static/js/main.842928ef.chunk.js",
-    "main.js.map": "/static/js/main.842928ef.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1df60f5d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1df60f5d.js.map",
-    "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.9295285d.chunk.js": "/static/js/2.9295285d.chunk.js",
-    "static/js/2.9295285d.chunk.js.map": "/static/js/2.9295285d.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.81b0d71c07fee62c985fc399cd4ddabb.js": "/precache-manifest.81b0d71c07fee62c985fc399cd4ddabb.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.2dd05b8a.chunk.css.map": "/static/css/main.2dd05b8a.chunk.css.map",
-    "static/js/2.9295285d.chunk.js.LICENSE.txt": "/static/js/2.9295285d.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.84fb968e.svg",
-    "static/media/notFound.png": "/static/media/notFound.42351577.png"
+    "main.css": "/ego-challenge/static/css/main.2dd05b8a.chunk.css",
+    "main.js": "/ego-challenge/static/js/main.ee0c6466.chunk.js",
+    "main.js.map": "/ego-challenge/static/js/main.ee0c6466.chunk.js.map",
+    "runtime-main.js": "/ego-challenge/static/js/runtime-main.cab4dcc7.js",
+    "runtime-main.js.map": "/ego-challenge/static/js/runtime-main.cab4dcc7.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/ego-challenge/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.3ab016e9.chunk.js": "/ego-challenge/static/js/2.3ab016e9.chunk.js",
+    "static/js/2.3ab016e9.chunk.js.map": "/ego-challenge/static/js/2.3ab016e9.chunk.js.map",
+    "index.html": "/ego-challenge/index.html",
+    "precache-manifest.492b9baac1be117d88d067a51bcd1537.js": "/ego-challenge/precache-manifest.492b9baac1be117d88d067a51bcd1537.js",
+    "service-worker.js": "/ego-challenge/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/ego-challenge/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.2dd05b8a.chunk.css.map": "/ego-challenge/static/css/main.2dd05b8a.chunk.css.map",
+    "static/js/2.3ab016e9.chunk.js.LICENSE.txt": "/ego-challenge/static/js/2.3ab016e9.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/ego-challenge/static/media/logo.84fb968e.svg",
+    "static/media/notFound.png": "/ego-challenge/static/media/notFound.42351577.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1df60f5d.js",
+    "static/js/runtime-main.cab4dcc7.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.9295285d.chunk.js",
+    "static/js/2.3ab016e9.chunk.js",
     "static/css/main.2dd05b8a.chunk.css",
-    "static/js/main.842928ef.chunk.js"
+    "static/js/main.ee0c6466.chunk.js"
   ]
 }
