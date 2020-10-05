@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c459885499a3606a73d7a68ffde42c62",
+    "revision": "bcdee876e5b7bdfa196a6271ddc8e52b",
     "url": "/ego-challenge/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ego-challenge/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "bae2d65c4de2a0bcec33",
+    "revision": "1f428a2be769c37dee56",
     "url": "/ego-challenge/static/css/main.2dd05b8a.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ego-challenge/static/js/2.3ab016e9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bae2d65c4de2a0bcec33",
-    "url": "/ego-challenge/static/js/main.f0d78ee6.chunk.js"
+    "revision": "1f428a2be769c37dee56",
+    "url": "/ego-challenge/static/js/main.f39291f7.chunk.js"
   },
   {
     "revision": "09931042304c693cb852",
