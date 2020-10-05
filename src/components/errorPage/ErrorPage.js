@@ -13,7 +13,7 @@ export default function ErrorPage() {
                     <h1 className="header-title">Página no encontrada!</h1>
                 </div>
                 <div className="col-12 d-flex justify-content-center linkToHome pt-4">
-                    <Link to='models' className='linkDataModel'>
+                    <Link to='/models' className='linkDataModel'>
                         <span 
                           className="footer-card menu-item"
                         >

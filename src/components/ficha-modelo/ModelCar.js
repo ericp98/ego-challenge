@@ -29,7 +29,7 @@ function ModelCar(props) {
         }
   
         return () => {isMounted = false}
-      }, []);
+      });
 
     return (
         <Fragment>
